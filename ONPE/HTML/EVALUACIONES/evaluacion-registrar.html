@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard ONPE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/fondo.css">
+  <link rel="stylesheet" href="/btn-vistas.css">
+    <link rel="stylesheet" href="/contenido.css">
+</head>
+
+<body>
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="logo">
+      <h3>ONPE</h3>
+    </div>
+
+    <div class="sidebar-menu">
+
+  <a href="/HTML/inicio.html" class="menu-btn">
+    <i class="fa-solid fa-house"></i>
+    Inicio
+  </a>
+
+  <a href="/HTML/postulaciones.html" class="menu-btn">
+    <i class="fa-solid fa-users"></i>
+    Postulaciones
+  </a>
+
+  <a href="/HTML/evaluaciones.html" class="menu-btn active">
+    <i class="fa-solid fa-clipboard-check"></i>
+    Evaluaciones
+  </a>
+
+  <a href="/HTML/documentos.html" class="menu-btn">
+    <i class="fa-solid fa-file-lines"></i>
+    Documentos
+  </a>
+
+  <a href="/HTML/reportes.html" class="menu-btn">
+    <i class="fa-solid fa-chart-column"></i>
+    Reportes
+  </a>
+
+  <a href="/HTML/usuarios.html" class="menu-btn">
+    <i class="fa-solid fa-user-group"></i>
+    Usuarios
+  </a>
+
+  <a href="/HTML/config.html" class="menu-btn">
+    <i class="fa-solid fa-gear"></i>
+    Configuración
+  </a>
+
+</div>
+
+    <div class="logout">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      Cerrar sesión
+    </div>
+
+  </aside>
+
+    <div class="main">
+
+    <!-- HEADER -->
+    <header class="header navbar navbar-expand-lg bg-white shadow-sm px-4">
+
+      <div>
+        <h4 class="fw-bold m-0">Registrar Evaluación</h4>
+        <small class="text-secondary">
+          Registro de resultados y observaciones de postulantes evaluados.
+        </small>
+      </div>
+
+      <div class="ms-auto d-flex align-items-center gap-3">
+
+        <!-- PERFIL -->
+        <div class="dropdown">
+
+          <button class="btn btn-light border dropdown-toggle d-flex align-items-center gap-2"
+            data-bs-toggle="dropdown">
+
+            <div class="avatar"></div>
+
+            Administrador
+
+          </button>
+
+          <ul class="dropdown-menu dropdown-menu-end">
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Perfil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                Configuración
+              </a>
+            </li>
+
+            <li><hr class="dropdown-divider"></li>
+
+            <li>
+              <a class="dropdown-item text-danger" href="#">
+                Cerrar sesión
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </header>
+
+<div class="content">
+    
+    <!-- BOTONES SUPERIORES -->
+    <div class="top-actions">
+
+        <!-- VOLVER -->
+        <a href="/HTML/evaluaciones.html"
+        class="btn btn-light shadow-sm back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Volver a vistas
+        </a>
+    </div>
+
+<!-- CONTENIDO -->
+<div class="dashboard-content">
+
+  <!-- FORMULARIO -->
+  <div class="card border-0 shadow-sm">
+
+    <div class="card-header bg-white">
+
+      <h5 class="fw-bold m-0">
+        Datos de la Evaluación
+      </h5>
+
+    </div>
+
+    <div class="card-body">
+
+      <form>
+
+        <div class="row g-4">
+
+          <!-- DNI -->
+          <div class="col-lg-4">
+
+            <label class="form-label fw-semibold">
+              DNI del Postulante
+            </label>
+
+            <input type="text"
+            class="form-control"
+            placeholder="Ingrese DNI">
+
+          </div>
+
+
+
+          <!-- NOMBRE -->
+          <div class="col-lg-4">
+
+            <label class="form-label fw-semibold">
+              Nombre del Postulante
+            </label>
+
+            <input type="text"
+            class="form-control"
+            placeholder="Ingrese nombre">
+
+          </div>
+
+
+
+          <!-- CARGO -->
+          <div class="col-lg-4">
+
+            <label class="form-label fw-semibold">
+              Cargo Postulado
+            </label>
+
+            <select class="form-select">
+
+              <option>
+                Seleccionar cargo
+              </option>
+
+              <option>
+                Coordinador
+              </option>
+
+              <option>
+                Supervisor
+              </option>
+
+              <option>
+                Asistente
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- TIPO -->
+          <div class="col-lg-4">
+
+            <label class="form-label fw-semibold">
+              Tipo de Evaluación
+            </label>
+
+            <select class="form-select">
+
+              <option>
+                Seleccionar evaluación
+              </option>
+
+              <option>
+                Entrevista
+              </option>
+
+              <option>
+                Examen Técnico
+              </option>
+
+              <option>
+                Evaluación Psicológica
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- PUNTAJE -->
+          <div class="col-lg-4">
+
+            <label class="form-label fw-semibold">
+              Puntaje
+            </label>
+
+            <input type="number"
+            class="form-control"
+            placeholder="0 - 100">
+
+          </div>
+
+          <!-- ESTADO -->
+          <div class="col-lg-4">
+
+            <label class="form-label fw-semibold">
+              Resultado
+            </label>
+
+            <select class="form-select">
+
+              <option>
+                Seleccionar resultado
+              </option>
+
+              <option>
+                Aprobado
+              </option>
+
+              <option>
+                Observado
+              </option>
+
+              <option>
+                Rechazado
+              </option>
+
+            </select>
+
+          </div>
+
+
+
+          <!-- FECHA -->
+          <div class="col-lg-6">
+
+            <label class="form-label fw-semibold">
+              Fecha de Evaluación
+            </label>
+
+            <input type="date"
+            class="form-control">
+
+          </div>
+
+
+
+          <!-- EVALUADOR -->
+          <div class="col-lg-6">
+
+            <label class="form-label fw-semibold">
+              Evaluador
+            </label>
+
+            <input type="text"
+            class="form-control"
+            placeholder="Nombre del evaluador">
+
+          </div>
+
+
+
+          <!-- OBSERVACIONES -->
+          <div class="col-12">
+
+            <label class="form-label fw-semibold">
+              Observaciones
+            </label>
+
+            <textarea
+            class="form-control"
+            rows="5"
+            placeholder="Ingrese observaciones de la evaluación"></textarea>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-end gap-3 mt-4">
+
+          <button type="reset"
+          class="btn btn-light border">
+
+            <i class="fa-solid fa-rotate-left"></i>
+
+            Limpiar
+
+          </button>
+
+
+
+          <button type="submit"
+          class="btn btn-danger">
+
+            <i class="fa-solid fa-floppy-disk"></i>
+
+            Guardar Evaluación
+
+          </button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+    </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

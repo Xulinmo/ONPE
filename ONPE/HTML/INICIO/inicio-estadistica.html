@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard ONPE</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- ICONOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- TUS CSS -->
+  <link rel="stylesheet" href="/fondo.css">
+  <link rel="stylesheet" href="/btn-vistas.css">
+  <link rel="stylesheet" href="/contenido.css">
+
+</head>
+
+<body>
+
+<!-- =========================================
+SIDEBAR
+========================================= -->
+
+<aside class="sidebar">
+
+  <div class="logo">
+    <h3>ONPE</h3>
+  </div>
+
+  <div class="sidebar-menu">
+
+    <a href="/HTML/inicio.html" class="menu-btn active">
+      <i class="fa-solid fa-house"></i>
+      Inicio
+    </a>
+
+    <a href="/HTML/postulaciones.html" class="menu-btn">
+      <i class="fa-solid fa-users"></i>
+      Postulaciones
+    </a>
+
+    <a href="/HTML/evaluaciones.html" class="menu-btn">
+      <i class="fa-solid fa-clipboard-check"></i>
+      Evaluaciones
+    </a>
+
+    <a href="/HTML/documentos.html" class="menu-btn">
+      <i class="fa-solid fa-file-lines"></i>
+      Documentos
+    </a>
+
+    <a href="/HTML/reportes.html" class="menu-btn">
+      <i class="fa-solid fa-chart-column"></i>
+      Reportes
+    </a>
+
+    <a href="/HTML/usuarios.html" class="menu-btn">
+      <i class="fa-solid fa-user-group"></i>
+      Usuarios
+    </a>
+
+    <a href="/HTML/config.html" class="menu-btn">
+      <i class="fa-solid fa-gear"></i>
+      Configuración
+    </a>
+
+  </div>
+
+  <div class="logout">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    Cerrar sesión
+  </div>
+
+</aside>
+
+<!-- =========================================
+MAIN
+========================================= -->
+
+<div class="main">
+
+  <!-- HEADER -->
+  <header class="header navbar navbar-expand-lg bg-white shadow-sm px-4">
+
+    <div>
+
+      <h4 class="fw-bold m-0">
+        Estadísticas Mensuales
+      </h4>
+
+      <small class="text-secondary">
+        Análisis mensual de postulaciones y resultados
+      </small>
+
+    </div>
+
+    <div class="ms-auto d-flex align-items-center gap-3">
+
+      <div class="dropdown">
+
+        <button class="btn btn-light border dropdown-toggle d-flex align-items-center gap-2"
+        data-bs-toggle="dropdown">
+
+          <div class="avatar"></div>
+
+          Administrador
+
+        </button>
+
+        <ul class="dropdown-menu dropdown-menu-end">
+
+          <li>
+            <a class="dropdown-item" href="#">
+              Perfil
+            </a>
+          </li>
+
+          <li>
+            <a class="dropdown-item" href="#">
+              Configuración
+            </a>
+          </li>
+
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+
+          <li>
+            <a class="dropdown-item text-danger" href="#">
+              Cerrar sesión
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </header>
+
+<!-- =========================================
+CONTENT
+========================================= -->
+
+<div class="content">
+
+  <!-- BOTONES -->
+  <div class="top-actions">
+
+    <a href="/HTML/inicio.html"
+    class="btn btn-light shadow-sm back-btn">
+
+      <i class="fa-solid fa-arrow-left"></i>
+
+      Volver a vistas
+
+    </a>
+
+    <button class="btn btn-danger">
+
+      <i class="fa-solid fa-file-pdf"></i>
+
+      Exportar PDF
+
+    </button>
+
+  </div>
+
+
+  <!-- TARJETAS -->
+  <div class="row g-4">
+
+    <!-- TOTAL -->
+    <div class="col-lg-3">
+
+      <div class="card dashboard-card shadow-sm border-0">
+
+        <div class="card-body">
+
+          <div class="card-top">
+
+            <div>
+
+              <span class="card-label">
+                Total Postulantes
+              </span>
+
+              <h1>148</h1>
+
+            </div>
+
+            <div class="card-icon primary">
+
+              <i class="fa-solid fa-users"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- APROBADOS -->
+    <div class="col-lg-3">
+
+      <div class="card dashboard-card shadow-sm border-0">
+
+        <div class="card-body">
+
+          <div class="card-top">
+
+            <div>
+
+              <span class="card-label">
+                Aprobados
+              </span>
+
+              <h1>98</h1>
+
+            </div>
+
+            <div class="card-icon success">
+
+              <i class="fa-solid fa-circle-check"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- OBSERVADOS -->
+    <div class="col-lg-3">
+
+      <div class="card dashboard-card shadow-sm border-0">
+
+        <div class="card-body">
+
+          <div class="card-top">
+
+            <div>
+
+              <span class="card-label">
+                Observados
+              </span>
+
+              <h1>26</h1>
+
+            </div>
+
+            <div class="card-icon warning">
+
+              <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- RECHAZADOS -->
+    <div class="col-lg-3">
+
+      <div class="card dashboard-card shadow-sm border-0">
+
+        <div class="card-body">
+
+          <div class="card-top">
+
+            <div>
+
+              <span class="card-label">
+                Rechazados
+              </span>
+
+              <h1>24</h1>
+
+            </div>
+
+            <div class="card-icon danger">
+
+              <i class="fa-solid fa-xmark"></i>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================================
+  GRAFICOS
+  ========================================= -->
+
+  <div class="row g-4 mt-3">
+
+    <!-- GRAFICO PRINCIPAL -->
+    <div class="col-lg-8">
+
+      <div class="card border-0 shadow-sm">
+
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+
+          <div>
+
+            <h5 class="fw-bold m-0">
+              Rendimiento Mensual
+            </h5>
+
+            <small class="text-secondary">
+              Comparación por meses
+            </small>
+
+          </div>
+
+          <select class="form-select w-auto">
+
+            <option>Enero</option>
+            <option>Febrero</option>
+            <option>Marzo</option>
+            <option>Abril</option>
+
+          </select>
+
+        </div>
+
+        <div class="card-body">
+
+          <!-- BASE DEL GRAFICO -->
+          <div class="chart-container">
+
+            <canvas id="monthlyChart"></canvas>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- DISTRIBUCION -->
+    <div class="col-lg-4">
+
+      <div class="card border-0 shadow-sm h-100">
+
+        <div class="card-header bg-white">
+
+          <h5 class="fw-bold m-0">
+            Distribución
+          </h5>
+
+        </div>
+
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+
+          <div class="circle-chart">
+
+            <div class="circle-center">
+              78%
+            </div>
+
+          </div>
+
+          <p class="mt-4 text-secondary">
+            Tasa de aprobación general
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- TABLA -->
+  <div class="card border-0 shadow-sm mt-4">
+
+    <div class="card-header bg-white">
+
+      <h5 class="fw-bold m-0">
+        Resumen Estadístico
+      </h5>
+
+    </div>
+
+    <div class="card-body">
+
+      <div class="table-responsive">
+
+        <table class="table align-middle">
+
+          <thead>
+
+            <tr>
+
+              <th>Mes</th>
+              <th>Postulantes</th>
+              <th>Aprobados</th>
+              <th>Observados</th>
+              <th>Rechazados</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>Enero</td>
+              <td>42</td>
+              <td>31</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+
+            <tr>
+              <td>Febrero</td>
+              <td>55</td>
+              <td>39</td>
+              <td>8</td>
+              <td>8</td>
+            </tr>
+
+            <tr>
+              <td>Marzo</td>
+              <td>51</td>
+              <td>28</td>
+              <td>13</td>
+              <td>10</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+</div>
+<!-- =========================================
+SCRIPTS
+========================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CHART JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- TU JS -->
+<script src="/chart.js"></script>
+
+</body>
+</html>
